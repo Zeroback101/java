@@ -6,15 +6,15 @@ public class Book {
   int page;
 
   Book() {
-    
+    this("", "", 0);
   }
-  Book(title, author) {
-    this(title, author);
+  Book(String title, String author) {
+    this(title, author, 0);
   }
-  Book(title, author, page) {
+  Book(String title, String author, int page) {
     this(title, author, page);
   }
   static void displayInfo() {
-    System.out.println("제목: " + title + "저자: " + author + "페이지 수: " + page);
+    System.out.println("제목: " + title + ", 저자: " + author + ", 페이지 수: " + page);
   }
 }
