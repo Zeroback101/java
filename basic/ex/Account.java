@@ -7,11 +7,11 @@ public class Account {
     balance += amount;
   }
   void withdraw(int amount) {
-    balance -= amount;
-    if(balance < 0) {
+    if(balance >= amount) {
+      balance -= amount;
+    }
+    else {
       System.out.println("잔액 부족");
-      balance += amount
-      System.out.println("잔고: ", balance);
     }
   }
 }
