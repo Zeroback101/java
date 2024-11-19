@@ -15,6 +15,6 @@ public class Book {
     this(title, author, page);
   }
   static void displayInfo() {
-    System.out.println("제목: " + title + ", 저자: " + author + ", 페이지 수: " + page);
+    System.Out.println("제목: " + title + ", 저자: " + author + ", 페이지 수: " + page);
   }
 }
