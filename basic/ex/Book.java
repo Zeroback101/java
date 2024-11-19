@@ -14,7 +14,7 @@ public class Book {
   Book(title, author, page) {
     this(title, author, page);
   }
-  static void displayinfo() {
+  static void displayInfo() {
     System.out.println("제목: " + title + "저자: " + author + "페이지 수: " + page);
   }
 }
