@@ -8,7 +8,6 @@
 - **특징1**: class 내부에 `속성(데이터)`과 `기능(메소드)`을 구현한다.
 ```java
 // class
-package oop;
 public class Object {
   int data;
 
@@ -21,6 +20,8 @@ public class Object {
 ```java
 // 할당하기
 Object object = new Object();
+// 메소드 사용하기
 object.showData();
 ```
 - **특징3**: `캡슐화` -> 속성과 기능을 하나로 묶어서 필요한 기능을 메소드를 통해 외부에 제공하는 것
+- **결론**: 객체지향 프로그래밍에서는 속성과 기능을 잘 묶어서 하나의 객체를 만드는 것이 중요하다.
