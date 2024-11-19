@@ -1,7 +1,7 @@
 package basic.ex;
 
 public class Account {
-  int balance;
+  int balance = 0;
 
   void deposit(int amount) {
     balance += amount;
