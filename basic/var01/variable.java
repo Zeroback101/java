@@ -1,4 +1,4 @@
-package basic
+package basic.var01
 
 public class variable {
   public static void main(String[] args) {
