@@ -1,7 +1,7 @@
 package basic.05access;
 
 public class Speaker {
-  int volume;
+  private int volume; // 외부 접근을 막고, 해당 클래스 내부에서만 접근 가능. 
 
   Speaker(int volume) {
     this.volume = volume;
