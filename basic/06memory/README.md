@@ -13,3 +13,25 @@
 클래스의 멤버 변수 구분
 - `인스턴스 변수`: 인스턴스가 생성될 때마다 인스턴스 안에 생성
 - `클래스 변수`: 클래스에 소속된 변수로 프로그램 실행시 1개 생성 후 공유, 정적 변수 == static 변수
+
+### static 메서드
+클래스의 메서드 구분
+- `인스턴스 메서드`
+- `클래스 메서드`: static mehod는 static만 사용할 수 있다.
+```java
+public class DecoData {
+    
+    private int instanceValue; // 인스턴스 변수
+    private static int staticValue; // 정적 변수
+    
+    public static void staticCall() { // 정적 메서드
+        staticValue++; // 정적 변수 접근 가능
+        instanceValue++; // 인스턴스 변수 접근 불가능, 컴파일 에러
+    }
+}
+```
+### main() method is static method
+메인 메소드는 객체 생성 없이 바로 호출이 되므로 static 메서드 이다. 
+
+따라서, main() 메서드에서 호출하는 클래스의 메서드는 모두 static method이다.
+
