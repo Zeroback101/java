@@ -1,4 +1,4 @@
-basic.08inheritance.access.child;
+package basic.08inheritance.access.child;
 
 import basic.08inheritance.access.parent.Parent;
 
