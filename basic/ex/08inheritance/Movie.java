@@ -13,7 +13,7 @@ public class Movie extends Item{
 
   @Override
   public void print() {
-    System.out.println("이름: " + name + "가격: " + price);
+    super.print();
     System.out.println(" - 감독: " + director + "배우: " + actor);
   }
 }
