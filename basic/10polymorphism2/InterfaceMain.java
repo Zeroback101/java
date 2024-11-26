@@ -3,11 +3,10 @@ package basic.10polymorphism2;
 public class InterfaceMain {
 
     public static void main(String[] args) {
-//        InterfaceAnimal interfaceAnimal = new InterfaceAnimal(); // 인터페이스 인스턴스화 불가
 
-        Dog dog = new Dog();
-        Cat cat = new Cat();
-        Caw caw = new Caw();
+        InterfaceDog dog = new InterfaceDog();
+        InterfaceCat cat = new InterfaceCat();
+        InterfaceCaw caw = new InterfaceCaw();
 
         cat.sound();
         cat.move();
