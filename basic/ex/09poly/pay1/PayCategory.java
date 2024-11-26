@@ -1,5 +1,5 @@
-package basic.ex.09poly.pay0;
+package basic.ex.09poly.pay1;
 
-public implements PayCategory {
-  public void pay(int amount);
+public implements Pay {
+  boolean pay(int amount);
 }
