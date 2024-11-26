@@ -51,7 +51,9 @@
     
     *다이아몬드 문제란? 클래스 A, B에 동일한 이름의 메서드(methodCommon())이 있어 두 클래스를 상속하는 경우 충돌하는 것!*
 
-
+## OCP(Open-Closed Principle) 원칙
+- **Open for extension**: 새로운 기능의 추가나 변경사항이 생겼을 때, 기존 코드는 확장할 수 있어야 한다.
+- **Closed for modification**: 기존의 코드는 수정되지 않아야 한다.
 
 
 
