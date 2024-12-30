@@ -1,1 +1,0 @@
-# java mid 1
