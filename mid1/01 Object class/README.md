@@ -78,6 +78,33 @@
     }
   ```
 
+### 4. equals()
+#### (1) 동일성과 동등성
+- 동일성(Identity): 연산자를 사용해서 두 객체의 참조가 동일한 객체를 가리키고 있는 것, `자바 메모리 참조 기준`
+- 동등성(Equality): equals() 메서드를 사용하여 두 객체가 논리적으로 동등한 것, `논리적 기준`
+
+- **동등성 비교를 사용하고 싶으면 equals() 메서드를 재정의해야 한다. 그렇지 않으면 object는 동일성 비교를 기본으로 제공한다.**
+
+#### (2) equals() 구현
+```java
+// 정확한 equals() 구현
+@Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        UserV2 userV2 = (UserV2) object;
+        return Objects.equals(id, userV2.id);
+    }
+```
+- 반사성: 객체는 자기 자신과 동등해야 한다.
+- 대칭성: 두 객체가 서로에 대해 동일하다고 판단하면 이는 양방향으로 동일해야 한다.
+- 추이성: 한 객체가 두번째 객체와 동일하고 두번째 객체가 세번째 객체와 동일하다면, 첫번째 객체는 세번째 객체와도 동일해야 한다.
+- 일관성: 두 객체의 상태가 변경되지 않는 한, equals() 메소드는 항상 동일한 값을 반환해야 한다.
+- null에 대한 비교: 모든 객체는 null과 비교했을 때 false를 반환해야 한다.
+
+
+
+
 
 
 
