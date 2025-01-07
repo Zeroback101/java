@@ -39,6 +39,20 @@ public class ClassGrade {
   > ordinal은 사용하지 않는 것이 좋다. 이 값을 사용하다가 중간에 상수를 선언하는 위치가 변경되면 전체 위치가 변경되기 때문이다.
 - toString(): ENUM 상수의 이름을 문자열로 반환, 오버라이딩 가능
 
+### (4) Enum 리팩토링
+```java
+public enum Grade {
+    BASIC(10), 
+    GOLD(20), 
+    DIAMOND(30);
+
+    private final int discountPercent; 
+
+    Grade(int discountPercent) { // 생성자
+        this.discountPercent = discountPercent;
+    }
+}
+```
 
 
 
