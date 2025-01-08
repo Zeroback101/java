@@ -112,6 +112,8 @@ class Outer {
 
 ### (5) 정리
 #### 정적 중첩 클래스
+- 바깥 클래스와 관련이 없다.
+- 인스턴스 간에 데이터 공유가 필요 없을 때 사용한다.
 ```java
 public class OuterClass1 {
     static class NestedClass {
@@ -122,6 +124,8 @@ public class OuterClass1 {
 }
 ```
 #### 내부 클래스
+- 바깥 클래스의 인스턴스와 연결되어 있다.
+- 바깥 클래스의 인스턴스 상태에 의존하거나 강하게 연관된 작업을 수행할 때 사용한다.
 ```java
 public class OuterClass2 {
     class InnerClass {
@@ -132,6 +136,10 @@ public class OuterClass2 {
 }
 ```
 #### 지역 클래스
+- 내부 클래스의 특징을 가진다.
+- 지역 변수에 접근할 수 있다.
+- 지역클래스가 접근하는 지역 변수는 final 이거나 사실상 final이다.
+- 주로 특정 메서드 내에서만 간단히 사용할 목적으로 사용한다.
 ```java
 public class OuterClass3 {
     public void myMethod() {
@@ -145,8 +153,24 @@ public class OuterClass3 {
     }
 }
 ```
+#### 익멱 클래스
+- 지역 클래스 중 하나로, 이름이 없다.
+- 상위 타입을 상속 또는 구현하면서 바로 생성된다.
+- 주로 특정 상위 타입을 간단히 구현해서 일회성으로 사용할 때 유용하다.
+```java
+public class AnonymousMain {
+    public static void main(String[] args) {
+        Hello hello = new Hello() {
+          @Override
+          public void hello() {
+              System.out.println("AnonymousClass.hello");
+          }
+        };
 
-
+        hello.hello();
+    }
+}
+```
 
 
 
