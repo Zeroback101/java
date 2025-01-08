@@ -92,6 +92,66 @@ class Outer {
   - 내부 클래스는 바깥 클래스의 인스턴스에 소속되므로 바깥 클래스의 인스턴스 정보를 알아야 생성할 수 있다.
   - 따라서 바깥 클래스의 인스턴스를 먼저 생성해야 내부 클래스의 인스터스를 생성할 수 있다.
 
+### (4) 지역 클래스
+- 자신의 인스턴스 변수에 접근할 수 있다.
+- 자신이 속한 코드 블럭의 지역 변수에 접근할 수 있다.
+- 자신이 속한 코드 블력의 매개 변수에 접근할 수 있다.
+- 바깥 클래스의 인스턴스 멤버에 접근할 수 있다.
+
+> 지역변수 캡쳐란?
+> 
+> - 변수의 생명 주기
+> 1. 클래스 변수: 프로그램 종료까지(메서드 영역)
+> 2. 인스턴스 변수: 인스턴스 생존 기간(힙 영역)
+> 3. 지역 변수: 메서드 호출이 끝나면 사라짐(스택 영역)
+>
+> 지역 클래스의 인스턴스를 생성하는 시점에 필요한 지역 변수를 복사해서 생성한 인스턴스에 함께 넣어두는 것을 지역변수 캡쳐라고 한다.
+> 지역 클래스가 접근하는 지역 변수는 final이어야 한다. 즉, 중간에 값이 변경되면 안된다.
+
+> `사실상 final` : 값이 변경되지 않는 변수
+
+### (5) 정리
+#### 정적 중첩 클래스
+```java
+public class OuterClass1 {
+    static class NestedClass {
+        public void hello() {
+            System.out.println("Nested.hello");
+        }
+    }
+}
+```
+#### 내부 클래스
+```java
+public class OuterClass2 {
+    class InnerClass {
+        public void hello() {
+            System.out.println("InnerClass.hello");
+        }
+    }
+}
+```
+#### 지역 클래스
+```java
+public class OuterClass3 {
+    public void myMethod() {
+        class LocalClass {
+            public void hello() {
+                System.out.println("LocalClass.hello");
+            }
+        }
+        LocalClass localClass = new LocalClass();
+        localClass.hello();
+    }
+}
+```
+
+
+
+
+
+
+
 
 
 
